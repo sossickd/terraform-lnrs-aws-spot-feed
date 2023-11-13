@@ -1,12 +1,12 @@
 #tfsec:ignore:aws-s3-enable-bucket-logging
 #tfsec:ignore:aws-s3-enable-versioning
 resource "aws_s3_bucket" "spotfeed" {
-  bucket = "spot-feed-${var.account_id}"
+  bucket = "lnrs-spot-feed-${var.account_id}"
 
   force_destroy = true
 
   tags = merge(var.tags, {
-    Name = "spot-feed-${var.account_id}"
+    Name = "lnrs-spot-feed-${var.account_id}"
   })
 }
 
